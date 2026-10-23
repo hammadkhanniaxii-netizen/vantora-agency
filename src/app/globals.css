@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 11, 12, 15;
+  --background-start-rgb: 245, 245, 240;
+  --background-end-rgb: 245, 245, 240;
+}
+
+[data-theme='dark'] {
+  --foreground-rgb: 245, 245, 240;
+  --background-start-rgb: 11, 12, 15;
+  --background-end-rgb: 11, 12, 15;
+}
+
+@layer base {
+  body {
+    @apply bg-porcelain text-obsidian antialiased selection:bg-acid-lime selection:text-obsidian;
+    font-family: var(--font-body), sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-acid-lime text-obsidian px-6 py-3 font-medium transition-all hover:scale-105 active:scale-95 inline-flex items-center justify-center;
+  }
+
+  .btn-outline {
+    @apply border border-obsidian/10 text-obsidian px-6 py-3 font-medium transition-all hover:bg-obsidian/5 active:scale-95 inline-flex items-center justify-center;
+  }
+}

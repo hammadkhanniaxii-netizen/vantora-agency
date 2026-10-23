@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id               String   @id @default(cuid())
+  title            String
+  slug             String   @unique
+  shortDescription String
+  fullIntroduction String   @db.Text
+  industry         String
+  services         String[]
+  heroImage        String
+  galleryAssets    String[]
+  isFeatured       Boolean  @default(false)
+  isConcept        Boolean  @default(true)
+  status           String   @default("published") // published, draft
+  sortOrder        Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("projects")
+}
+
+model Article {
+  id               String   @id @default(cuid())
+  title            String
+  slug             String   @unique
+  summary          String
+  content          String   @db.Text
+  category         String
+  heroImage        String
+  author           String
+  status           String   @default("published") // published, draft
+  publishedAt      DateTime @default(now())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  @@map("articles")
+}
+
+model Enquiry {
+  id                 String   @id @default(cuid())
+  contactName        String
+  email              String
+  company            String?
+  website            String?
+  requestedServices  String[]
+  budgetRange        String
+  desiredTimeline    String
+  projectDescription String   @db.Text
+  privacyConsentAt   DateTime @default(now())
+  status             String   @default("new") // new, contacted, completed
+  createdAt          DateTime @default(now())
+
+  @@map("enquiries")
+}

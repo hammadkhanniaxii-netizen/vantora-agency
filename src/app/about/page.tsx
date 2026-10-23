@@ -15,7 +15,7 @@ export default function AboutPage() {
             <h1 className="text-5xl md:text-8xl font-display font-bold text-obsidian tracking-tighter leading-tight">
               Design for the <br /> next era.
             </h1>
-          </div}
+          </div>
           <p className="text-muted-grey text-lg max-w-sm">
             We are a small team of obsessives dedicated to the intersection of brand, technology, and emotion.
           </p>

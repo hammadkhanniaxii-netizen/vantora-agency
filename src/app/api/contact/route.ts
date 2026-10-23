@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { submitEnquiry } from '@/app/api/contact/route'; // This is a helper, not the actual route handler
+import { submitEnquiry } from '@/lib/content-service';
 
 // The actual route handler
 export async function POST(request: Request) {

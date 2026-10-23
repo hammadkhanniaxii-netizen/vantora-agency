@@ -46,7 +46,7 @@ export default function ServicesPage() {
             <h1 className="text-5xl md:text-8xl font-display font-bold text-obsidian tracking-tighter leading-tight">
               Design that <br /> drives desire.
             </h1>
-          </div}
+          </div>
           <p className="text-muted-grey text-lg max-w-sm">
             A multidisciplinary approach to creative technology and brand evolution.
           </p>

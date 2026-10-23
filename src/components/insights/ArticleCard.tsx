@@ -13,7 +13,7 @@ interface ArticleCardProps {
     summary: string;
     category: string;
     heroImage: string;
-    publishedAt: string;
+    publishedAt: string | Date;
   };
 }
 

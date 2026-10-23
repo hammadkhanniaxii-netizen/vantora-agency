@@ -36,7 +36,7 @@ export default function Reveal({
       transition: {
         duration: shouldReduceMotion ? 0 : duration,
         delay: shouldReduceMotion ? 0 : delay,
-        ease: [0.215, 0.61, 0.355, 1],
+        ease: [0.215, 0.61, 0.355, 1] as const,
       },
     },
   };

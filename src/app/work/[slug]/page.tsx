@@ -4,8 +4,9 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, CheckCircle2 } from 'lucide-react';
 
-export default async function ProjectDetails({ params }: { params: { slug: string } }) {
-  const project = await getProjectBySlug(params.slug);
+export default async function ProjectDetails({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = await getProjectBySlug(slug);
 
   if (!project) {
     notFound();

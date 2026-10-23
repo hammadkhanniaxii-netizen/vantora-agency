@@ -53,7 +53,7 @@ export default function ProcessPage() {
             <h1 className="text-5xl md:text-8xl font-display font-bold text-obsidian tracking-tighter leading-tight">
               From vision <br /> to velocity.
             </h1>
-          </div}
+          </div>
           <p className="text-muted-grey text-lg max-w-sm">
             A structured, five-stage process designed to eliminate guesswork and maximize impact.
           </p>

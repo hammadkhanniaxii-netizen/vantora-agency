@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 
-export default function Footer() {
+export default async function Footer() {
+  'use cache';
   const currentYear = new Date().getFullYear();
 
   return (
